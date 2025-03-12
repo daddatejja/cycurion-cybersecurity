@@ -1,0 +1,239 @@
+@font-face {
+    font-family: defaultFont;
+    src: url(./fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2);
+}
+
+@font-face {
+    font-family: headingFont;
+    src: url(./fonts/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
+}
+
+@font-face {
+    font-family: detailFont;
+    src: url(./fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: defaultFont, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #e5e0df;
+}
+
+h1,
+h3,
+h2 {
+    font-family: headingFont;
+}
+
+h2 {
+    font-size: clamp(4rem, 5vw, 4.5rem);
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+p {
+    font-family: detailFont;
+    font-size: 1.7rem;
+    font-weight: 200;
+    line-height: 3rem;
+
+}
+
+i {
+    font-size: 40px;
+}
+
+/* Hero Section */
+main {
+    color: white;
+    background: url(./images/hero-image-1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section {
+    padding: 80px 15vw;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main h1 {
+    font-size: clamp(4rem, 5vw, 4.5rem);
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.detail {
+    width: 48%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* -x-- Hero Section End --x- */
+
+/* Investment Highlights Section */
+section.investment-highlights-section {
+    margin: 10px 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.highlight-image-container {
+    width: 35%;
+    height: 80vh;
+    border-radius: 10px;
+    background: url('./images/5-common-IT.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+section.investment-highlights-section .highlights-container {
+    width: 65%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.investment-highlights-section .highlights-container .highlight {
+    display: flex;
+    width: 48%;
+    margin: 1%;
+}
+
+section.investment-highlights-section .highlights-container .highlight:last-child {
+    width: 100%;
+    margin-top: 30px;
+}
+
+section.investment-highlights-section .highlights-container .highlight span {
+    height: fit-content;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: #3d3d42;
+    margin-right: 18px;
+}
+
+section.investment-highlights-section .highlights-container .highlight p {
+    font-weight: 300;
+    max-width: 85%;
+}
+
+/* -x-- Investment Highlights Section End --x-*/
+
+/* Market Highlights Section */
+section.market-highlights-section {
+    padding: 80px 10vw;
+    background-color: black;
+    color: white;
+}
+
+section.market-highlights-section .market-highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.market-highlights-section .market-highlights-container .highlight {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.market-highlights-section .market-highlights-container .highlight h3,
+section.market-highlights-section .market-highlights-container .highlight p {
+    max-width: 85%;
+}
+
+/* -x-- Market Highlights Section --x- */
+
+@media screen and (max-width: 1200px) {
+
+    /* Hero Section */
+    .detail {
+        width: 100%;
+    }
+
+    /* -x-- Hero Section End --x- */
+}
+
+@media screen and (max-width: 720px) {
+
+    /* Investment Highlights Section */
+    section.investment-highlights-section {
+        flex-direction: column;
+    }
+
+    .highlight-image-container {
+        width: 100%;
+        height: 40vh;
+    }
+
+    section.investment-highlights-section .highlights-container {
+        width: 100%;
+        padding: 0px;
+    }
+
+    section.investment-highlights-section .highlights-container .highlight {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    section.investment-highlights-section .highlights-container .highlight:last-child {
+        margin-top: 0px;
+    }
+
+    section.investment-highlights-section .highlights-container .highlight p {
+        max-width: 100%;
+    }
+
+    /* -x-- Investment Highlights Section End --x-*/
+
+    /* Market Highlights Section */
+
+    section.market-highlights-section .market-highlights-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.market-highlights-section .market-highlights-container .highlight {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    section.market-highlights-section .market-highlights-container .highlight h3,
+    section.market-highlights-section .market-highlights-container .highlight p {
+        max-width: 100%;
+    }
+
+    /* -x-- Market Highlights Section --x- */
+}
